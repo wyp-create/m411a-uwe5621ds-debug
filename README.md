@@ -1,7 +1,7 @@
-# Skyworth M411A (S905L3A) UWE5621DS WiFi on Armbian 6.18
+# M411A (S905L3A) UWE5621DS WiFi on Armbian 6.18
 
 ## 硬件
-- Box: Skyworth M411A, Amlogic S905L3A
+- Box: M411A, Amlogic S905L3A
 - WiFi chip: Unisoc UWE5621DS (SDIO, chipid 0x56630001)
 - Kernel: Armbian 6.18.53-ophub (mainline)
 - DTB: meson-g12a-s905l3a-e900v22c.dtb
