@@ -1,0 +1,536 @@
+Oct 15 15:41:13 armbian kernel: Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+Oct 15 15:41:13 armbian kernel: Linux version 6.18.53-ophub (wei@Debian13) (aarch64-linux-gnu-gcc (Debian 14.2.0-19) 14.2.0, GNU ld (GNU Binutils for Debian) 2.44) #3 SMP PREEMPT_DYNAMIC Thu Oct 15 15:23:33 CST 2026
+Oct 15 15:41:13 armbian kernel: Machine model: SKYWORTH E900V22C
+Oct 15 15:41:13 armbian kernel: efi: UEFI not found.
+Oct 15 15:41:13 armbian kernel: Reserved memory: created CMA memory pool at 0x0000000062c00000, size 256 MiB
+Oct 15 15:41:13 armbian kernel: OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+Oct 15 15:41:13 armbian kernel: OF: reserved mem: 0x0000000062c00000..0x0000000072bfffff (262144 KiB) map reusable linux,cma
+Oct 15 15:41:13 armbian kernel: OF: reserved mem: 0x0000000005000000..0x00000000052fffff (3072 KiB) nomap non-reusable secmon@5000000
+Oct 15 15:41:13 armbian kernel: OF: reserved mem: 0x0000000005300000..0x00000000072fffff (32768 KiB) nomap non-reusable secmon@5300000
+Oct 15 15:41:13 armbian kernel: Zone ranges:
+Oct 15 15:41:13 armbian kernel:   DMA      [mem 0x0000000000000000-0x000000007fffffff]
+Oct 15 15:41:13 armbian kernel:   DMA32    empty
+Oct 15 15:41:13 armbian kernel:   Normal   empty
+Oct 15 15:41:13 armbian kernel: Movable zone start for each node
+Oct 15 15:41:13 armbian kernel: Early memory node ranges
+Oct 15 15:41:13 armbian kernel:   node   0: [mem 0x0000000000000000-0x0000000004ffffff]
+Oct 15 15:41:13 armbian kernel:   node   0: [mem 0x0000000005000000-0x00000000072fffff]
+Oct 15 15:41:13 armbian kernel:   node   0: [mem 0x0000000007300000-0x000000007fffffff]
+Oct 15 15:41:13 armbian kernel: Initmem setup node 0 [mem 0x0000000000000000-0x000000007fffffff]
+Oct 15 15:41:13 armbian kernel: psci: probing for conduit method from DT.
+Oct 15 15:41:13 armbian kernel: psci: PSCIv1.0 detected in firmware.
+Oct 15 15:41:13 armbian kernel: psci: Using standard PSCI v0.2 function IDs
+Oct 15 15:41:13 armbian kernel: psci: MIGRATE_INFO_TYPE not supported.
+Oct 15 15:41:13 armbian kernel: psci: SMC Calling Convention v1.1
+Oct 15 15:41:13 armbian kernel: RME: RMM doesn't support RSI version 1.0. Supported range: 1.0-0.0
+Oct 15 15:41:13 armbian kernel: percpu: Embedded 31 pages/cpu s89688 r8192 d29096 u126976
+Oct 15 15:41:13 armbian kernel: pcpu-alloc: s89688 r8192 d29096 u126976 alloc=31*4096
+Oct 15 15:41:13 armbian kernel: pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+Oct 15 15:41:13 armbian kernel: Detected VIPT I-cache on CPU0
+Oct 15 15:41:13 armbian kernel: CPU features: detected: ARM erratum 845719
+Oct 15 15:41:13 armbian kernel: alternatives: applying boot alternatives
+Oct 15 15:41:13 armbian kernel: Kernel command line: root=UUID=f7f5bca4-2641-417d-9ff8-637be9f0b6bd rootflags=data=writeback rw rootfstype=ext4 console=ttyAML0,115200n8 console=tty0 no_console_suspend consoleblank=0 fsck.fix=yes fsck.repair=yes net.ifnames=0 max_loop=128 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 video=HDMI-A-1:1920x1080@60e plymouth.enable=0 init=/usr/lib/systemd/systemd selinux=0 nowatchdog mac=A0:4C:0C:04:AD:1F
+Oct 15 15:41:13 armbian kernel: Unknown kernel command line parameters "nowatchdog cgroup_enable=memory cgroup_memory=1 mac=A0:4C:0C:04:AD:1F", will be passed to user space.
+Oct 15 15:41:13 armbian kernel: printk: log buffer data + meta data: 262144 + 917504 = 1179648 bytes
+Oct 15 15:41:13 armbian kernel: Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Oct 15 15:41:13 armbian kernel: Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+Oct 15 15:41:13 armbian kernel: software IO TLB: SWIOTLB bounce buffer size adjusted to 2MB
+Oct 15 15:41:13 armbian kernel: software IO TLB: area num 4.
+Oct 15 15:41:13 armbian kernel: software IO TLB: mapped [mem 0x000000007d600000-0x000000007d800000] (2MB)
+Oct 15 15:41:13 armbian kernel: Built 1 zonelists, mobility grouping on.  Total pages: 524288
+Oct 15 15:41:13 armbian kernel: mem auto-init: stack:off, heap alloc:off, heap free:off
+Oct 15 15:41:13 armbian kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Oct 15 15:41:13 armbian kernel: Dynamic Preempt: voluntary
+Oct 15 15:41:13 armbian kernel: rcu: Preemptible hierarchical RCU implementation.
+Oct 15 15:41:13 armbian kernel: rcu:         RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+Oct 15 15:41:13 armbian kernel:         Trampoline variant of Tasks RCU enabled.
+Oct 15 15:41:13 armbian kernel:         Tracing variant of Tasks RCU enabled.
+Oct 15 15:41:13 armbian kernel: rcu: RCU calculated value of scheduler-enlistment delay is 30 jiffies.
+Oct 15 15:41:13 armbian kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+Oct 15 15:41:13 armbian kernel: RCU Tasks: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+Oct 15 15:41:13 armbian kernel: RCU Tasks Trace: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+Oct 15 15:41:13 armbian kernel: NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+Oct 15 15:41:13 armbian kernel: Root IRQ handler: gic_handle_irq
+Oct 15 15:41:13 armbian kernel: GIC: Using split EOI/Deactivate mode
+Oct 15 15:41:13 armbian kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+Oct 15 15:41:13 armbian kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370867519511994 ns
+Oct 15 15:41:13 armbian kernel: arch_timer: cp15 timer running at 24.00MHz (phys).
+Oct 15 15:41:13 armbian kernel: clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+Oct 15 15:41:13 armbian kernel: sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+Oct 15 15:41:13 armbian kernel: Console: colour dummy device 80x25
+Oct 15 15:41:13 armbian kernel: printk: legacy console [tty0] enabled
+Oct 15 15:41:13 armbian kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=80000)
+Oct 15 15:41:13 armbian kernel: pid_max: default: 32768 minimum: 301
+Oct 15 15:41:13 armbian kernel: LSM: initializing lsm=capability,apparmor
+Oct 15 15:41:13 armbian kernel: AppArmor: AppArmor initialized
+Oct 15 15:41:13 armbian kernel: Mount-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+Oct 15 15:41:13 armbian kernel: Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+Oct 15 15:41:13 armbian kernel: rcu: Hierarchical SRCU implementation.
+Oct 15 15:41:13 armbian kernel: rcu:         Max phase no-delay instances is 1000.
+Oct 15 15:41:13 armbian kernel: EFI services will not be available.
+Oct 15 15:41:13 armbian kernel: smp: Bringing up secondary CPUs ...
+Oct 15 15:41:13 armbian kernel: Detected VIPT I-cache on CPU1
+Oct 15 15:41:13 armbian kernel: CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+Oct 15 15:41:13 armbian kernel: Detected VIPT I-cache on CPU2
+Oct 15 15:41:13 armbian kernel: CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+Oct 15 15:41:13 armbian kernel: Detected VIPT I-cache on CPU3
+Oct 15 15:41:13 armbian kernel: CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+Oct 15 15:41:13 armbian kernel: smp: Brought up 1 node, 4 CPUs
+Oct 15 15:41:13 armbian kernel: SMP: Total of 4 processors activated.
+Oct 15 15:41:13 armbian kernel: CPU: All CPU(s) started at EL2
+Oct 15 15:41:13 armbian kernel: CPU features: detected: 32-bit EL0 Support
+Oct 15 15:41:13 armbian kernel: CPU features: detected: 32-bit EL1 Support
+Oct 15 15:41:13 armbian kernel: CPU features: detected: CRC32 instructions
+Oct 15 15:41:13 armbian kernel: CPU features: detected: PMUv3
+Oct 15 15:41:13 armbian kernel: alternatives: applying system-wide alternatives
+Oct 15 15:41:13 armbian kernel: Memory: 1690628K/2097152K available (21056K kernel code, 4254K rwdata, 14724K rodata, 2624K init, 621K bss, 139916K reserved, 262144K cma-reserved)
+Oct 15 15:41:13 armbian kernel: devtmpfs: initialized
+Oct 15 15:41:13 armbian kernel: posixtimers hash table entries: 2048 (order: 3, 32768 bytes, linear)
+Oct 15 15:41:13 armbian kernel: futex hash table entries: 1024 (65536 bytes on 1 NUMA nodes, total 64 KiB, linear).
+Oct 15 15:41:13 armbian kernel: 21888 pages in range for non-PLT usage
+Oct 15 15:41:13 armbian kernel: 513408 pages in range for PLT usage
+Oct 15 15:41:13 armbian kernel: prandom: seed boundary self test passed
+Oct 15 15:41:13 armbian kernel: prandom: 100 self tests passed
+Oct 15 15:41:13 armbian kernel: pinctrl core: initialized pinctrl subsystem
+Oct 15 15:41:13 armbian kernel: DMI not present or invalid.
+Oct 15 15:41:13 armbian kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Oct 15 15:41:13 armbian kernel: DMA: preallocated 256 KiB GFP_KERNEL pool for atomic allocations
+Oct 15 15:41:13 armbian kernel: DMA: preallocated 256 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+Oct 15 15:41:13 armbian kernel: DMA: preallocated 256 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+Oct 15 15:41:13 armbian kernel: audit: initializing netlink subsys (disabled)
+Oct 15 15:41:13 armbian kernel: audit: type=2000 audit(0.046:1): state=initialized audit_enabled=0 res=1
+Oct 15 15:41:13 armbian kernel: thermal_sys: Registered thermal governor 'fair_share'
+Oct 15 15:41:13 armbian kernel: thermal_sys: Registered thermal governor 'bang_bang'
+Oct 15 15:41:13 armbian kernel: thermal_sys: Registered thermal governor 'step_wise'
+Oct 15 15:41:13 armbian kernel: thermal_sys: Registered thermal governor 'user_space'
+Oct 15 15:41:13 armbian kernel: thermal_sys: Registered thermal governor 'power_allocator'
+Oct 15 15:41:13 armbian kernel: cpuidle: using governor ladder
+Oct 15 15:41:13 armbian kernel: hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+Oct 15 15:41:13 armbian kernel: ASID allocator initialised with 65536 entries
+Oct 15 15:41:13 armbian kernel: Serial: AMBA PL011 UART driver
+Oct 15 15:41:13 armbian kernel: /soc/bus@ff600000/hdmi-tx@0: Fixed dependency cycle(s) with /soc/vpu@ff900000
+Oct 15 15:41:13 armbian kernel: /soc/vpu@ff900000: Fixed dependency cycle(s) with /soc/bus@ff600000/hdmi-tx@0
+Oct 15 15:41:13 armbian kernel: /soc/interrupt-controller@ffc01000: Fixed dependency cycle(s) with /soc/interrupt-controller@ffc01000
+Oct 15 15:41:13 armbian kernel: /soc/bus@ff600000/hdmi-tx@0: Fixed dependency cycle(s) with /soc/vpu@ff900000
+Oct 15 15:41:13 armbian kernel: /soc/bus@ff600000/hdmi-tx@0: Fixed dependency cycle(s) with /soc/vpu@ff900000
+Oct 15 15:41:13 armbian kernel: /soc/bus@ff600000/hdmi-tx@0: Fixed dependency cycle(s) with /soc/vpu@ff900000
+Oct 15 15:41:13 armbian kernel: /soc/vpu@ff900000: Fixed dependency cycle(s) with /soc/bus@ff600000/hdmi-tx@0
+Oct 15 15:41:13 armbian kernel: /soc/vpu@ff900000: Fixed dependency cycle(s) with /cvbs-connector
+Oct 15 15:41:13 armbian kernel: /cvbs-connector: Fixed dependency cycle(s) with /soc/vpu@ff900000
+Oct 15 15:41:13 armbian kernel: /soc/bus@ff600000/hdmi-tx@0: Fixed dependency cycle(s) with /hdmi-connector
+Oct 15 15:41:13 armbian kernel: /hdmi-connector: Fixed dependency cycle(s) with /soc/bus@ff600000/hdmi-tx@0
+Oct 15 15:41:13 armbian kernel: HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+Oct 15 15:41:13 armbian kernel: HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+Oct 15 15:41:13 armbian kernel: HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+Oct 15 15:41:13 armbian kernel: HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+Oct 15 15:41:13 armbian kernel: HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+Oct 15 15:41:13 armbian kernel: HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+Oct 15 15:41:13 armbian kernel: HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+Oct 15 15:41:13 armbian kernel: HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+Oct 15 15:41:13 armbian kernel: raid6: neonx8   gen()  2239 MB/s
+Oct 15 15:41:13 armbian kernel: raid6: neonx4   gen()  2209 MB/s
+Oct 15 15:41:13 armbian kernel: raid6: neonx2   gen()  2116 MB/s
+Oct 15 15:41:13 armbian kernel: raid6: neonx1   gen()  1810 MB/s
+Oct 15 15:41:13 armbian kernel: raid6: int64x8  gen()  1374 MB/s
+Oct 15 15:41:13 armbian kernel: raid6: int64x4  gen()  1556 MB/s
+Oct 15 15:41:13 armbian kernel: raid6: int64x2  gen()  1414 MB/s
+Oct 15 15:41:13 armbian kernel: raid6: int64x1  gen()  1032 MB/s
+Oct 15 15:41:13 armbian kernel: raid6: using algorithm neonx8 gen() 2239 MB/s
+Oct 15 15:41:13 armbian kernel: raid6: .... xor() 1653 MB/s, rmw enabled
+Oct 15 15:41:13 armbian kernel: raid6: using neon recovery algorithm
+Oct 15 15:41:13 armbian kernel: ACPI: Interpreter disabled.
+Oct 15 15:41:13 armbian kernel: iommu: Default domain type: Translated
+Oct 15 15:41:13 armbian kernel: iommu: DMA domain TLB invalidation policy: strict mode
+Oct 15 15:41:13 armbian kernel: SCSI subsystem initialized
+Oct 15 15:41:13 armbian kernel: libata version 3.00 loaded.
+Oct 15 15:41:13 armbian kernel: usbcore: registered new interface driver usbfs
+Oct 15 15:41:13 armbian kernel: usbcore: registered new interface driver hub
+Oct 15 15:41:13 armbian kernel: usbcore: registered new device driver usb
+Oct 15 15:41:13 armbian kernel: mc: Linux media interface: v0.10
+Oct 15 15:41:13 armbian kernel: videodev: Linux video capture interface: v2.00
+Oct 15 15:41:13 armbian kernel: pps_core: LinuxPPS API ver. 1 registered
+Oct 15 15:41:13 armbian kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Oct 15 15:41:13 armbian kernel: PTP clock support registered
+Oct 15 15:41:13 armbian kernel: EDAC MC: Ver: 3.0.0
+Oct 15 15:41:13 armbian kernel: scmi_core: SCMI protocol bus registered
+Oct 15 15:41:13 armbian kernel: Advanced Linux Sound Architecture Driver Initialized.
+Oct 15 15:41:13 armbian kernel: vgaarb: loaded
+Oct 15 15:41:13 armbian kernel: clocksource: Switched to clocksource arch_sys_counter
+Oct 15 15:41:13 armbian kernel: VFS: Disk quotas dquot_6.6.0
+Oct 15 15:41:13 armbian kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Oct 15 15:41:13 armbian kernel: AppArmor: AppArmor Filesystem Enabled
+Oct 15 15:41:13 armbian kernel: pnp: PnP ACPI: disabled
+Oct 15 15:41:13 armbian kernel: NET: Registered PF_INET protocol family
+Oct 15 15:41:13 armbian kernel: IP idents hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Oct 15 15:41:13 armbian kernel: tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes, linear)
+Oct 15 15:41:13 armbian kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Oct 15 15:41:13 armbian kernel: TCP established hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Oct 15 15:41:13 armbian kernel: TCP bind hash table entries: 16384 (order: 7, 524288 bytes, linear)
+Oct 15 15:41:13 armbian kernel: TCP: Hash tables configured (established 16384 bind 16384)
+Oct 15 15:41:13 armbian kernel: MPTCP token hash table entries: 2048 (order: 4, 49152 bytes, linear)
+Oct 15 15:41:13 armbian kernel: UDP hash table entries: 1024 (order: 4, 65536 bytes, linear)
+Oct 15 15:41:13 armbian kernel: UDP-Lite hash table entries: 1024 (order: 4, 65536 bytes, linear)
+Oct 15 15:41:13 armbian kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+Oct 15 15:41:13 armbian kernel: NET: Registered PF_XDP protocol family
+Oct 15 15:41:13 armbian kernel: PCI: CLS 0 bytes, default 64
+Oct 15 15:41:13 armbian kernel: Trying to unpack rootfs image as initramfs...
+Oct 15 15:41:13 armbian kernel: kvm [1]: nv: 568 coarse grained trap handlers
+Oct 15 15:41:13 armbian kernel: kvm [1]: nv: 664 fine grained trap handlers
+Oct 15 15:41:13 armbian kernel: kvm [1]: IPA Size Limit: 40 bits
+Oct 15 15:41:13 armbian kernel: kvm [1]: vgic interrupt IRQ9
+Oct 15 15:41:13 armbian kernel: kvm [1]: Hyp nVHE mode initialized successfully
+Oct 15 15:41:13 armbian kernel: Initialise system trusted keyrings
+Oct 15 15:41:13 armbian kernel: workingset: timestamp_bits=46 max_order=19 bucket_order=0
+Oct 15 15:41:13 armbian kernel: squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Oct 15 15:41:13 armbian kernel: fuse: init (API version 7.45)
+Oct 15 15:41:13 armbian kernel: SGI XFS with ACLs, security attributes, quota, no debug enabled
+Oct 15 15:41:13 armbian kernel: cryptd: max_cpu_qlen set to 1000
+Oct 15 15:41:13 armbian kernel: NET: Registered PF_ALG protocol family
+Oct 15 15:41:13 armbian kernel: xor: measuring software checksum speed
+Oct 15 15:41:13 armbian kernel:    8regs           :  2582 MB/sec
+Oct 15 15:41:13 armbian kernel:    32regs          :  2608 MB/sec
+Oct 15 15:41:13 armbian kernel:    arm64_neon      :  2328 MB/sec
+Oct 15 15:41:13 armbian kernel: xor: using function: 32regs (2608 MB/sec)
+Oct 15 15:41:13 armbian kernel: Key type asymmetric registered
+Oct 15 15:41:13 armbian kernel: Asymmetric key parser 'x509' registered
+Oct 15 15:41:13 armbian kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 240)
+Oct 15 15:41:13 armbian kernel: io scheduler mq-deadline registered
+Oct 15 15:41:13 armbian kernel: io scheduler kyber registered
+Oct 15 15:41:13 armbian kernel: io scheduler bfq registered
+Oct 15 15:41:13 armbian kernel: irq_meson_gpio: 100 to 8 gpio interrupt mux initialized
+Oct 15 15:41:13 armbian kernel: Freeing initrd memory: 17552K
+Oct 15 15:41:13 armbian kernel: ledtrig-cpu: registered to indicate activity on CPUs
+Oct 15 15:41:13 armbian kernel: soc soc0: Amlogic Meson G12A (Unknown) Revision 28:e (70:2) Detected
+Oct 15 15:41:13 armbian kernel: Serial: 8250/16550 driver, 5 ports, IRQ sharing disabled
+Oct 15 15:41:13 armbian kernel: Serial: AMBA driver
+Oct 15 15:41:13 armbian kernel: ff803000.serial: ttyAML0 at MMIO 0xff803000 (irq = 14, base_baud = 1500000) is a meson_uart
+Oct 15 15:41:13 armbian kernel: printk: legacy console [ttyAML0] enabled
+Oct 15 15:41:13 armbian kernel: random: crng init done
+Oct 15 15:41:13 armbian kernel: misc dump reg init
+Oct 15 15:41:13 armbian kernel: brd: module loaded
+Oct 15 15:41:13 armbian kernel: loop: module loaded
+Oct 15 15:41:13 armbian kernel: zloop: Module loaded
+Oct 15 15:41:13 armbian kernel: usbcore: registered new interface driver cdc_wdm
+Oct 15 15:41:13 armbian kernel: usbcore: registered new interface driver uas
+Oct 15 15:41:13 armbian kernel: usbcore: registered new interface driver usb-storage
+Oct 15 15:41:13 armbian kernel: usbcore: registered new interface driver usbserial_generic
+Oct 15 15:41:13 armbian kernel: usbserial: USB Serial support registered for generic
+Oct 15 15:41:13 armbian kernel: usbcore: registered new interface driver ch341
+Oct 15 15:41:13 armbian kernel: usbserial: USB Serial support registered for ch341-uart
+Oct 15 15:41:13 armbian kernel: usbcore: registered new interface driver cp210x
+Oct 15 15:41:13 armbian kernel: usbserial: USB Serial support registered for cp210x
+Oct 15 15:41:13 armbian kernel: usbcore: registered new interface driver ftdi_sio
+Oct 15 15:41:13 armbian kernel: usbserial: USB Serial support registered for FTDI USB Serial Device
+Oct 15 15:41:13 armbian kernel: usbcore: registered new interface driver pl2303
+Oct 15 15:41:13 armbian kernel: usbserial: USB Serial support registered for pl2303
+Oct 15 15:41:13 armbian kernel: usbcore: registered new device driver onboard-usb-dev
+Oct 15 15:41:13 armbian kernel: i2c_dev: i2c /dev entries driver
+Oct 15 15:41:13 armbian kernel: Registered IR keymap rc-cec
+Oct 15 15:41:13 armbian kernel: rc rc0: meson_g12a_ao_cec as /devices/platform/soc/ff800000.bus/ff800280.cec/rc/rc0
+Oct 15 15:41:13 armbian kernel: input: meson_g12a_ao_cec as /devices/platform/soc/ff800000.bus/ff800280.cec/rc/rc0/input0
+Oct 15 15:41:13 armbian kernel: meson-sm: secure-monitor enabled
+Oct 15 15:41:13 armbian kernel: hid: raw HID events driver (C) Jiri Kosina
+Oct 15 15:41:13 armbian kernel: usbcore: registered new interface driver usbhid
+Oct 15 15:41:13 armbian kernel: usbhid: USB HID core driver
+Oct 15 15:41:13 armbian kernel: NET: Registered PF_LLC protocol family
+Oct 15 15:41:13 armbian kernel: Initializing XFRM netlink socket
+Oct 15 15:41:13 armbian kernel: NET: Registered PF_INET6 protocol family
+Oct 15 15:41:13 armbian kernel: Segment Routing with IPv6
+Oct 15 15:41:13 armbian kernel: RPL Segment Routing with IPv6
+Oct 15 15:41:13 armbian kernel: In-situ OAM (IOAM) with IPv6
+Oct 15 15:41:13 armbian kernel: sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+Oct 15 15:41:13 armbian kernel: NET: Registered PF_PACKET protocol family
+Oct 15 15:41:13 armbian kernel: NET: Registered PF_KEY protocol family
+Oct 15 15:41:13 armbian kernel: bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+Oct 15 15:41:13 armbian kernel: registered taskstats version 1
+Oct 15 15:41:13 armbian kernel: Loading compiled-in X.509 certificates
+Oct 15 15:41:13 armbian kernel: zswap: loaded using pool zstd
+Oct 15 15:41:13 armbian kernel: Key type .fscrypt registered
+Oct 15 15:41:13 armbian kernel: Key type fscrypt-provisioning registered
+Oct 15 15:41:13 armbian kernel: Btrfs loaded, zoned=yes, fsverity=no
+Oct 15 15:41:13 armbian kernel: AppArmor: AppArmor sha256 policy hashing enabled
+Oct 15 15:41:13 armbian kernel: meson-drm ff900000.vpu: Queued 2 outputs on vpu
+Oct 15 15:41:13 armbian kernel: meson-dw-hdmi ff600000.hdmi-tx: Detected HDMI TX controller v2.01a with HDCP (meson_dw_hdmi_phy)
+Oct 15 15:41:13 armbian kernel: meson-dw-hdmi ff600000.hdmi-tx: registered DesignWare HDMI I2C bus driver
+Oct 15 15:41:13 armbian kernel: meson-drm ff900000.vpu: bound ff600000.hdmi-tx (ops 0xffff8000816e62c8)
+Oct 15 15:41:13 armbian kernel: [drm] forcing HDMI-A-1 connector on
+Oct 15 15:41:13 armbian kernel: meson-drm ff900000.vpu: DSI transceiver device is disabled
+Oct 15 15:41:13 armbian kernel: [drm] Initialized meson 1.0.0 for ff900000.vpu on minor 0
+Oct 15 15:41:13 armbian kernel: Console: switching to colour frame buffer device 240x67
+Oct 15 15:41:13 armbian kernel: meson-drm ff900000.vpu: [drm] fb0: mesondrmfb frame buffer device
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: IRQ eth_wake_irq not found
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: IRQ sfty not found
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: PTP uses main clock
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: User ID: 0x11, Synopsys ID: 0x37
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet:         DWMAC1000
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: DMA HW capability register supported
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: Active PHY interface: GMII/MII (0)
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: RX Checksum Offload Engine supported
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: COE Type 2
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: TX Checksum insertion supported
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: Wake-Up On Lan supported
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: Normal descriptors
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: Ring mode enabled
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+Oct 15 15:41:13 armbian kernel: meson8b-dwmac ff3f0000.ethernet: device MAC address 92:d8:15:8c:cc:a0
+Oct 15 15:41:13 armbian kernel: meson-gx-mmc ffe03000.mmc: allocated mmc-pwrseq
+Oct 15 15:41:13 armbian kernel: meson-gx-mmc ffe05000.mmc: Got CD GPIO
+Oct 15 15:41:13 armbian kernel: dwc3-meson-g12a ffe09000.usb: USB2 ports: 2
+Oct 15 15:41:13 armbian kernel: dwc3-meson-g12a ffe09000.usb: USB3 ports: 1
+Oct 15 15:41:13 armbian kernel: phy phy-ff636000.phy.0: Runtime PM usage count underflow!
+Oct 15 15:41:13 armbian kernel: phy phy-ff63a000.phy.1: Runtime PM usage count underflow!
+Oct 15 15:41:13 armbian kernel: phy phy-ff646000.phy.2: Runtime PM usage count underflow!
+Oct 15 15:41:13 armbian kernel: dwc2 ff400000.usb: supply vusb_d not found, using dummy regulator
+Oct 15 15:41:13 armbian kernel: dwc2 ff400000.usb: supply vusb_a not found, using dummy regulator
+Oct 15 15:41:13 armbian kernel: phy phy-ff63a000.phy.1: Runtime PM usage count underflow!
+Oct 15 15:41:13 armbian kernel: dwc2 ff400000.usb: EPs: 7, dedicated fifos, 712 entries in SPRAM
+Oct 15 15:41:13 armbian kernel: phy phy-ff63a000.phy.1: Runtime PM usage count underflow!
+Oct 15 15:41:13 armbian kernel: phy phy-ff63a000.phy.1: Runtime PM usage count underflow!
+Oct 15 15:41:13 armbian kernel: xhci-hcd xhci-hcd.2.auto: xHCI Host Controller
+Oct 15 15:41:13 armbian kernel: xhci-hcd xhci-hcd.2.auto: new USB bus registered, assigned bus number 1
+Oct 15 15:41:13 armbian kernel: xhci-hcd xhci-hcd.2.auto: hcc params 0x0228fe6c hci version 0x110 quirks 0x0000808000000010
+Oct 15 15:41:13 armbian kernel: xhci-hcd xhci-hcd.2.auto: irq 26, io mem 0xff500000
+Oct 15 15:41:13 armbian kernel: xhci-hcd xhci-hcd.2.auto: xHCI Host Controller
+Oct 15 15:41:13 armbian kernel: xhci-hcd xhci-hcd.2.auto: new USB bus registered, assigned bus number 2
+Oct 15 15:41:13 armbian kernel: xhci-hcd xhci-hcd.2.auto: Host supports USB 3.0 SuperSpeed
+Oct 15 15:41:13 armbian kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.18
+Oct 15 15:41:13 armbian kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Oct 15 15:41:13 armbian kernel: usb usb1: Product: xHCI Host Controller
+Oct 15 15:41:13 armbian kernel: usb usb1: Manufacturer: Linux 6.18.53-ophub xhci-hcd
+Oct 15 15:41:13 armbian kernel: usb usb1: SerialNumber: xhci-hcd.2.auto
+Oct 15 15:41:13 armbian kernel: hub 1-0:1.0: USB hub found
+Oct 15 15:41:13 armbian kernel: hub 1-0:1.0: 2 ports detected
+Oct 15 15:41:13 armbian kernel: usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+Oct 15 15:41:13 armbian kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.18
+Oct 15 15:41:13 armbian kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Oct 15 15:41:13 armbian kernel: usb usb2: Product: xHCI Host Controller
+Oct 15 15:41:13 armbian kernel: usb usb2: Manufacturer: Linux 6.18.53-ophub xhci-hcd
+Oct 15 15:41:13 armbian kernel: usb usb2: SerialNumber: xhci-hcd.2.auto
+Oct 15 15:41:13 armbian kernel: hub 2-0:1.0: USB hub found
+Oct 15 15:41:13 armbian kernel: hub 2-0:1.0: 1 port detected
+Oct 15 15:41:13 armbian kernel: meson-gx-mmc ffe07000.mmc: allocated mmc-pwrseq
+Oct 15 15:41:13 armbian kernel: clk: Disabling unused clocks
+Oct 15 15:41:13 armbian kernel: PM: genpd: Disabling unused power domains
+Oct 15 15:41:13 armbian kernel: ALSA device list:
+Oct 15 15:41:13 armbian kernel:   No soundcards found.
+Oct 15 15:41:13 armbian kernel: Freeing unused kernel memory: 2624K
+Oct 15 15:41:13 armbian kernel: Run /init as init process
+Oct 15 15:41:13 armbian kernel:   with arguments:
+Oct 15 15:41:13 armbian kernel:     /init
+Oct 15 15:41:13 armbian kernel:     nowatchdog
+Oct 15 15:41:13 armbian kernel:   with environment:
+Oct 15 15:41:13 armbian kernel:     HOME=/
+Oct 15 15:41:13 armbian kernel:     TERM=linux
+Oct 15 15:41:13 armbian kernel:     cgroup_enable=memory
+Oct 15 15:41:13 armbian kernel:     cgroup_memory=1
+Oct 15 15:41:13 armbian kernel:     mac=A0:4C:0C:04:AD:1F
+Oct 15 15:41:13 armbian kernel: mmc2: new HS200 MMC card at address 0001
+Oct 15 15:41:13 armbian kernel: mmcblk2: mmc2:0001 CJTD4R 58.2 GiB
+Oct 15 15:41:13 armbian kernel:  mmcblk2: p1 p2
+Oct 15 15:41:13 armbian kernel: mmcblk2boot0: mmc2:0001 CJTD4R 4.00 MiB
+Oct 15 15:41:13 armbian kernel: mmcblk2boot1: mmc2:0001 CJTD4R 4.00 MiB
+Oct 15 15:41:13 armbian kernel: mmcblk2rpmb: mmc2:0001 CJTD4R 4.00 MiB, chardev (235:0)
+Oct 15 15:41:13 armbian kernel: mmc0: Skipping voltage switch
+Oct 15 15:41:13 armbian kernel: mmc0: new high speed SDIO card at address 8800
+Oct 15 15:41:13 armbian kernel: Kernel module BTF mismatch detected, BTF debug info may be unavailable for some modules
+Oct 15 15:41:13 armbian kernel: meson-vrtc ff8000a8.rtc: registered as rtc0
+Oct 15 15:41:13 armbian kernel: meson-vrtc ff8000a8.rtc: setting system clock to 1970-01-01T00:00:09 UTC (9)
+Oct 15 15:41:13 armbian kernel: EXT4-fs (mmcblk2p2): mounted filesystem f7f5bca4-2641-417d-9ff8-637be9f0b6bd r/w with writeback data mode. Quota mode: none.
+Oct 15 15:41:13 armbian systemd[1]: System time advanced to built-in epoch: Tue 2026-04-14 03:38:05 CST
+Oct 15 15:41:13 armbian systemd[1]: systemd 257.13-1~deb13u1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+Oct 15 15:41:13 armbian systemd[1]: Detected architecture arm64.
+Oct 15 15:41:13 armbian systemd[1]: Hostname set to <armbian>.
+Oct 15 15:41:13 armbian systemd[1]: bpf-restrict-fs: BPF LSM hook not enabled in the kernel, BPF LSM not supported.
+Oct 15 15:41:13 armbian systemd[1]: Queued start job for default target graphical.target.
+Oct 15 15:41:13 armbian systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+Oct 15 15:41:13 armbian systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+Oct 15 15:41:13 armbian systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+Oct 15 15:41:13 armbian systemd[1]: Created slice system-systemd\x2dfsck.slice - Slice /system/systemd-fsck.
+Oct 15 15:41:13 armbian systemd[1]: Created slice user.slice - User and Session Slice.
+Oct 15 15:41:13 armbian systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+Oct 15 15:41:13 armbian systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+Oct 15 15:41:13 armbian systemd[1]: Expecting device dev-disk-by\x2dlabel-BOOT_EMMC.device - /dev/disk/by-label/BOOT_EMMC...
+Oct 15 15:41:13 armbian systemd[1]: Expecting device dev-ttyAML0.device - /dev/ttyAML0...
+Oct 15 15:41:13 armbian systemd[1]: Reached target slices.target - Slice Units.
+Oct 15 15:41:13 armbian systemd[1]: Reached target swap.target - Swaps.
+Oct 15 15:41:13 armbian systemd[1]: Listening on rpcbind.socket - RPCbind Server Activation Socket.
+Oct 15 15:41:13 armbian systemd[1]: Listening on syslog.socket - Syslog Socket.
+Oct 15 15:41:13 armbian systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+Oct 15 15:41:13 armbian systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+Oct 15 15:41:13 armbian systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+Oct 15 15:41:13 armbian systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+Oct 15 15:41:13 armbian systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+Oct 15 15:41:13 armbian systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+Oct 15 15:41:13 armbian systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+Oct 15 15:41:13 armbian systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+Oct 15 15:41:13 armbian systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+Oct 15 15:41:13 armbian systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+Oct 15 15:41:13 armbian systemd[1]: Mounting run-lock.mount - Legacy Locks Directory /run/lock...
+Oct 15 15:41:13 armbian systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+Oct 15 15:41:13 armbian systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+Oct 15 15:41:13 armbian systemd[1]: auth-rpcgss-module.service - Kernel Module supporting RPCSEC_GSS skipped, unmet condition check ConditionPathExists=/etc/krb5.keytab
+Oct 15 15:41:13 armbian systemd[1]: Starting fake-hwclock-load.service - Restore the current clock...
+Oct 15 15:41:13 armbian systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+Oct 15 15:41:13 armbian systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+Oct 15 15:41:13 armbian systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+Oct 15 15:41:13 armbian systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+Oct 15 15:41:13 armbian systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+Oct 15 15:41:13 armbian systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+Oct 15 15:41:13 armbian systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+Oct 15 15:41:13 armbian systemd[1]: Starting systemd-journald.service - Journal Service...
+Oct 15 15:41:13 armbian systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+Oct 15 15:41:13 armbian systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+Oct 15 15:41:13 armbian systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+Oct 15 15:41:13 armbian systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+Oct 15 15:41:13 armbian systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+Oct 15 15:41:13 armbian kernel: missing module BTF, cannot register kfunc
+Oct 15 15:41:13 armbian systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+Oct 15 15:41:13 armbian systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+Oct 15 15:41:13 armbian systemd[1]: Mounted run-lock.mount - Legacy Locks Directory /run/lock.
+Oct 15 15:41:13 armbian systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+Oct 15 15:41:13 armbian systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+Oct 15 15:41:13 armbian systemd-journald[263]: Collecting audit messages is disabled.
+Oct 15 15:41:13 armbian systemd[1]: fake-hwclock-load.service: Deactivated successfully.
+Oct 15 15:41:13 armbian systemd[1]: Finished fake-hwclock-load.service - Restore the current clock.
+Oct 15 15:41:13 armbian systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+Oct 15 15:41:13 armbian systemd[1]: modprobe@configfs.service: Deactivated successfully.
+Oct 15 15:41:13 armbian systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+Oct 15 15:41:13 armbian systemd[1]: modprobe@drm.service: Deactivated successfully.
+Oct 15 15:41:13 armbian systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+Oct 15 15:41:13 armbian systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+Oct 15 15:41:13 armbian systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+Oct 15 15:41:13 armbian systemd[1]: Started systemd-journald.service - Journal Service.
+Oct 15 15:41:13 armbian kernel: EXT4-fs (mmcblk2p2): re-mounted f7f5bca4-2641-417d-9ff8-637be9f0b6bd.
+Oct 15 15:41:13 armbian systemd-journald[263]: Received client request to flush runtime journal.
+Oct 15 15:41:14 armbian kernel: missing module BTF, cannot register kfunc
+Oct 15 15:41:14 armbian kernel: missing module BTF, cannot register kfunc
+Oct 15 15:41:14 armbian kernel: meson_vdec: module is from the staging directory, the quality is unknown, you have been warned.
+Oct 15 15:41:15 armbian kernel: zram: Added device: zram0
+Oct 15 15:41:15 armbian kernel: zram0: detected capacity change from 0 to 1977416
+Oct 15 15:41:15 armbian kernel: Adding 988704k swap on /dev/zram0.  Priority:100 extents:1 across:988704k SS
+Oct 15 15:41:15 armbian kernel: Registered IR keymap rc-empty
+Oct 15 15:41:15 armbian kernel: rc rc1: meson-ir as /devices/platform/soc/ff800000.bus/ff808000.ir/rc/rc1
+Oct 15 15:41:15 armbian kernel: rc rc1: lirc_dev: driver meson-ir registered at minor = 0, raw IR receiver, no transmitter
+Oct 15 15:41:15 armbian kernel: input: meson-ir as /devices/platform/soc/ff800000.bus/ff808000.ir/rc/rc1/input1
+Oct 15 15:41:15 armbian kernel: rc rc1: sw decoder init
+Oct 15 15:41:15 armbian kernel: meson-ir ff808000.ir: receiver initialized
+Oct 15 15:41:15 armbian kernel: RPC: Registered named UNIX socket transport module.
+Oct 15 15:41:15 armbian kernel: RPC: Registered udp transport module.
+Oct 15 15:41:15 armbian kernel: RPC: Registered tcp transport module.
+Oct 15 15:41:15 armbian kernel: RPC: Registered tcp-with-tls transport module.
+Oct 15 15:41:15 armbian kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+Oct 15 15:41:15 armbian kernel: panfrost ffe40000.gpu: clock rate = 24000000
+Oct 15 15:41:15 armbian kernel: uwe5621_bsp_sdio: loading out-of-tree module taints kernel.
+Oct 15 15:41:15 armbian kernel: WCN: marlin_init entry!
+Oct 15 15:41:15 armbian kernel: panfrost ffe40000.gpu: mali-g31 id 0x7093 major 0x0 minor 0x0 status 0x0
+Oct 15 15:41:15 armbian kernel: panfrost ffe40000.gpu: features: 00000000,000027f7, issues: 00000000,00000400
+Oct 15 15:41:15 armbian kernel: panfrost ffe40000.gpu: Features: L2:0x07100206 Shader:0x00000000 Tiler:0x00000209 Mem:0x1 MMU:0x00002821 AS:0xff JS:0x7
+Oct 15 15:41:15 armbian kernel: panfrost ffe40000.gpu: shader_present=0x1 l2_present=0x1
+Oct 15 15:41:15 armbian kernel: sdiohal:sdiohal_parse_dt adma_tx:0, adma_rx:0, pwrseq:0, irq type:data, gpio_num:0, blksize:840
+Oct 15 15:41:15 armbian kernel: sdiohal:sdiohal_init ok
+Oct 15 15:41:15 armbian kernel: WCN: marlin_probe ok!
+Oct 15 15:41:15 armbian kernel: axg-sound-card sound: workaround: internal PCM chmap controls mapped to device 0
+Oct 15 15:41:15 armbian kernel: panfrost ffe40000.gpu: [drm] Using Transparent Hugepage
+Oct 15 15:41:15 armbian kernel: [drm] Initialized panfrost 1.6.0 for ffe40000.gpu on minor 1
+Oct 15 15:41:15 armbian kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Oct 15 15:41:15 armbian kernel: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Oct 15 15:41:15 armbian kernel: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+Oct 15 15:41:16 armbian systemd-journald[263]: Received client request to relinquish /var/log/journal/03588fa953420eba104483636ab945e4 access.
+Oct 15 15:41:16 armbian kernel: WCN: start_marlin [MARLIN_WIFI]
+Oct 15 15:41:16 armbian kernel: WCN: marlin power state:0, subsys: [MARLIN_WIFI] power 1
+Oct 15 15:41:16 armbian kernel: WCN: the first power on start
+Oct 15 15:41:16 armbian kernel: sdiohal:sdiohal_scan_card
+Oct 15 15:41:16 armbian kernel: sdiohal:sdiohal_probe: func->class=0, vendor=0x0000, device=0x0000, func_num=0x0001, clock=12500000
+Oct 15 15:41:16 armbian kernel: WCN: marlin_get_wcn_chipid: chipid: 0x56630001
+Oct 15 15:41:16 armbian kernel: WCN: marlin_scan_finish!
+Oct 15 15:41:16 armbian kernel: sdiohal:probe ok
+Oct 15 15:41:16 armbian kernel: sdiohal:scan end!
+Oct 15 15:41:16 armbian kernel: WCN: then marlin start to download
+Oct 15 15:41:16 armbian kernel: WCN: marlin_request_firmware from /lib/firmware/uwe5621/wcnmodem.bin start!
+Oct 15 15:41:16 armbian kernel: meson8b-dwmac ff3f0000.ethernet eth0: Register MEM_TYPE_PAGE_POOL RxQ-0
+Oct 15 15:41:16 armbian kernel: meson8b-dwmac ff3f0000.ethernet eth0: PHY [mdio_mux-0.1:08] driver [Meson G12A Internal PHY] (irq=24)
+Oct 15 15:41:16 armbian kernel: meson8b-dwmac ff3f0000.ethernet eth0: No Safety Features support found
+Oct 15 15:41:16 armbian kernel: meson8b-dwmac ff3f0000.ethernet eth0: PTP not supported by HW
+Oct 15 15:41:16 armbian kernel: meson8b-dwmac ff3f0000.ethernet eth0: configuring for phy/rmii link mode
+Oct 15 15:41:17 armbian kernel: WCN_ERR: load_firmware_data_path: open file /lib/firmware/uwe5621/wcnmodem.bin error
+Oct 15 15:41:17 armbian kernel: WCN: marlin_request_firmware from /lib/firmware/wcnmodem.bin start!
+Oct 15 15:41:17 armbian kernel: WCN: marlin_firmware_parse_image imagepack is WCNE type,need parse it
+Oct 15 15:41:17 armbian kernel: WCN: marlin marlin_firmware_write imagepack is WCNE type,need parse it
+Oct 15 15:41:17 armbian kernel: WCN: combin_img 4 marlin_firmware_write finish and successful
+Oct 15 15:41:17 armbian kernel: WCN: marlin_start_run read reset reg val:0x180008
+Oct 15 15:41:17 armbian kernel: WCN: after do marlin_start_run reset reg val:0x80008
+Oct 15 15:41:17 armbian kernel: WCN: s_marlin_bootup_time=16426505145
+Oct 15 15:41:17 armbian kernel: WCN: clock mode: TCXO, outside clock
+Oct 15 15:41:17 armbian kernel: WCN: marlin_write_cali_data sync init_state:0x0
+Oct 15 15:41:17 armbian kernel: WCN: marlin_write_cali_data sync init_state:0x0
+Oct 15 15:41:17 armbian kernel: WCN: marlin_write_cali_data sync init_state:0x0
+Oct 15 15:41:17 armbian kernel: WCN: marlin_write_cali_data sync init_state:0xf0f0f0f1
+Oct 15 15:41:17 armbian kernel: WCN: sdio_config rx mode:[sdma]
+Oct 15 15:41:17 armbian kernel: WCN: sdio_config irq:[inband]
+Oct 15 15:41:17 armbian kernel: WCN: sdio_config wake_host_level_duration_time:[20ms]
+Oct 15 15:41:17 armbian kernel: WCN: marlin_send_sdio_config_to_cp sdio_config:0x880811 (enable config)
+Oct 15 15:41:17 armbian kernel: WCN: marlin_write_cali_data finish
+Oct 15 15:41:17 armbian kernel: WCN: check_cp_ready sync val:0xf0f0f0f2, prj_type val:0xe0e0e0e0
+Oct 15 15:41:17 armbian kernel: WCN: check_cp_ready sync val:0xf0f0f0f2, prj_type val:0xe0e0e0e0
+Oct 15 15:41:17 armbian kernel: WCN: check_cp_ready sync val:0xf0f0f0f2, prj_type val:0xe0e0e0e0
+Oct 15 15:41:17 armbian kernel: WCN: check_cp_ready sync val:0xf0f0f0f2, prj_type val:0xe0e0e0e0
+Oct 15 15:41:17 armbian kernel: WCN: check_cp_ready sync val:0xf0f0f0f3, prj_type val:0xe0e0e0e0
+Oct 15 15:41:17 armbian kernel: WCN: check_cp_ready sync val:0xf0f0f0ff, prj_type val:0xe0e0e0e0
+Oct 15 15:41:17 armbian kernel: sdiohal:sdiohal_runtime_get entry
+Oct 15 15:41:17 armbian kernel: WCN: get_cp2_version entry!
+Oct 15 15:41:17 armbian kernel: meson8b-dwmac ff3f0000.ethernet eth0: Link is Up - 100Mbps/Full - flow control off
+Oct 15 15:41:18 armbian kernel: sdiohal:success num:[2]
+Oct 15 15:41:18 armbian kernel: sdiohal:sdiohal_abort
+Oct 15 15:41:18 armbian kernel: sdiohal:carddump flag set[1]
+Oct 15 15:41:18 armbian kernel: sdiohal:disable rx int for dump
+Oct 15 15:41:18 armbian kernel: sdiohal:chn8 tx push old, cmdid=0, mstime=0, record_time=0
+Oct 15 15:41:18 armbian kernel: chn8 tx push old: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+Oct 15 15:41:18 armbian kernel: sdiohal:chn8 tx denq old, cmdid=0, mstime=0, record_time=0
+Oct 15 15:41:18 armbian kernel: chn8 tx denq old: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+Oct 15 15:41:18 armbian kernel: sdiohal:chn22 rx dispatch old, cmdid=0, mstime=0, record_time=0
+Oct 15 15:41:18 armbian kernel: chn22 rx dispatch old: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+Oct 15 15:41:18 armbian kernel: sdiohal:chn8 tx push new, cmdid=0, mstime=0, record_time=0
+Oct 15 15:41:18 armbian kernel: chn8 tx push new: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+Oct 15 15:41:18 armbian kernel: sdiohal:chn8 tx denq new, cmdid=0, mstime=0, record_time=0
+Oct 15 15:41:18 armbian kernel: chn8 tx denq new: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+Oct 15 15:41:18 armbian kernel: sdiohal:chn22 rx dispatch new, cmdid=0, mstime=0, record_time=0
+Oct 15 15:41:18 armbian kernel: chn22 rx dispatch new: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+Oct 15 15:41:18 armbian kernel: sdiohal err:tyr send,type:0 subtype:0 node_num:1
+Oct 15 15:41:18 armbian kernel: sdiohal err:pt_read retry 0, ret=-84
+Oct 15 15:41:18 armbian kernel: sdiohal err:sdiohal_sdio_pt_read line 294 dump happened
+Oct 15 15:41:18 armbian kernel: sdiohal err:sdio pt read fail ret:-19
+Oct 15 15:41:21 armbian kernel: WCN_ERR: didn't get CP2 version
+Oct 15 15:41:21 armbian kernel: WCN: switch_cp2_log - close entry!
+Oct 15 15:41:21 armbian kernel: br-c178902fe12f: port 1(veth3a8cd31) entered blocking state
+Oct 15 15:41:21 armbian kernel: br-c178902fe12f: port 1(veth3a8cd31) entered disabled state
+Oct 15 15:41:21 armbian kernel: veth3a8cd31: entered allmulticast mode
+Oct 15 15:41:21 armbian kernel: veth3a8cd31: entered promiscuous mode
+Oct 15 15:41:21 armbian kernel: docker0: port 1(veth2ca04da) entered blocking state
+Oct 15 15:41:21 armbian kernel: docker0: port 1(veth2ca04da) entered disabled state
+Oct 15 15:41:21 armbian kernel: veth2ca04da: entered allmulticast mode
+Oct 15 15:41:21 armbian kernel: veth2ca04da: entered promiscuous mode
+Oct 15 15:41:22 armbian kernel: eth0: renamed from veth58393e7
+Oct 15 15:41:22 armbian kernel: docker0: port 2(veth6101a0f) entered blocking state
+Oct 15 15:41:22 armbian kernel: docker0: port 2(veth6101a0f) entered disabled state
+Oct 15 15:41:22 armbian kernel: veth6101a0f: entered allmulticast mode
+Oct 15 15:41:22 armbian kernel: veth6101a0f: entered promiscuous mode
+Oct 15 15:41:22 armbian kernel: docker0: port 1(veth2ca04da) entered blocking state
+Oct 15 15:41:22 armbian kernel: docker0: port 1(veth2ca04da) entered forwarding state
+Oct 15 15:41:22 armbian kernel: eth0: renamed from veth2e43357
+Oct 15 15:41:22 armbian kernel: docker0: port 2(veth6101a0f) entered blocking state
+Oct 15 15:41:22 armbian kernel: docker0: port 2(veth6101a0f) entered forwarding state
+Oct 15 15:41:22 armbian kernel: docker0: port 3(veth4593317) entered blocking state
+Oct 15 15:41:22 armbian kernel: docker0: port 3(veth4593317) entered disabled state
+Oct 15 15:41:22 armbian kernel: veth4593317: entered allmulticast mode
+Oct 15 15:41:22 armbian kernel: veth4593317: entered promiscuous mode
+Oct 15 15:41:22 armbian kernel: eth0: renamed from veth53d87a0
+Oct 15 15:41:22 armbian kernel: br-c178902fe12f: port 1(veth3a8cd31) entered blocking state
+Oct 15 15:41:22 armbian kernel: br-c178902fe12f: port 1(veth3a8cd31) entered forwarding state
+Oct 15 15:41:22 armbian kernel: eth0: renamed from veth81c7268
+Oct 15 15:41:22 armbian kernel: docker0: port 3(veth4593317) entered blocking state
+Oct 15 15:41:22 armbian kernel: docker0: port 3(veth4593317) entered forwarding state
+Oct 15 15:41:24 armbian kernel: WCN_ERR: didn't get switch_cp2_log ack
+Oct 15 15:41:24 armbian kernel: WCN: then marlin download finished and run ok
+Oct 15 15:41:24 armbian kernel: wireguard: WireGuard 1.0.0 loaded. See www.wireguard.com for information.
+Oct 15 15:41:24 armbian kernel: wireguard: Copyright (C) 2015-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
+Oct 15 15:41:52 armbian kernel: unisoc_wifi unisoc_wifi: probe with driver unisoc_wifi failed with error -1
